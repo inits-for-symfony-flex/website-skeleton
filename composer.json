@@ -1,0 +1,42 @@
+{
+    "name": "symfony-flex-init/web-server",
+    "description": "Composer init script for symfony/skeleton with Web Server",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "suggest": {
+        "symfony/skeleton": "Used by script symfony-skeleton",
+        "symfony/web-server-bundle": "Used by script symfony-skeleton"
+    },
+    "scripts-descriptions": {
+        "symfony-skeleton": "Create project using symfony/skeleton"
+    },
+    "scripts": {
+        "symfony-skeleton": [
+            "@composer create-project --no-install symfony/skeleton",
+            "@composer --working-dir=skeleton config bin-dir bin",
+            "@composer --working-dir=skeleton install",
+            "@composer --working-dir=skeleton require sensio/framework-extra-bundle",
+            "@composer --working-dir=skeleton require symfony/asset",
+            "@composer --working-dir=skeleton require symfony/expression-language",
+            "@composer --working-dir=skeleton require symfony/form",
+            "@composer --working-dir=skeleton require symfony/monolog-bundle",
+            "@composer --working-dir=skeleton require symfony/orm-pack",
+            "@composer --working-dir=skeleton require symfony/process",
+            "@composer --working-dir=skeleton require symfony/security-bundle",
+            "@composer --working-dir=skeleton require symfony/serializer-pack",
+            "@composer --working-dir=skeleton require symfony/swiftmailer-bundle",
+            "@composer --working-dir=skeleton require symfony/twig-bundle",
+            "@composer --working-dir=skeleton require symfony/validator",
+            "@composer --working-dir=skeleton require symfony/web-link",
+            "@composer --working-dir=skeleton require symfony/webpack-encore-pack",
+            "@composer --working-dir=skeleton require symfony/browser-kit --dev",
+            "@composer --working-dir=skeleton require symfony/css-selector --dev",
+            "@composer --working-dir=skeleton require symfony/debug-pack --dev",
+            "@composer --working-dir=skeleton require symfony/maker-bundle --dev",
+            "@composer --working-dir=skeleton require symfony/phpunit-bridge --dev",
+            "@composer --working-dir=skeleton require symfony/profiler-pack --dev",
+            "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
+        ]
+    }
+}
