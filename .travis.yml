@@ -4,6 +4,7 @@ language: php
 addons:
   apt:
     packages:
+    - colordiff
     - elinks # For dysplaying php files on console.
 
 cache:
@@ -42,14 +43,17 @@ install:
 - composer install
 - composer run-script --list
 - composer run-script -- symfony-skeleton --ansi
+- composer create-project symfony/website-skeleton
 
 before_script:
 # - curl_security_check composer.lock
+- curl_security_check website-skeleton/composer.lock
 - curl_security_check skeleton/composer.lock
 #^ This checks that the application doesn't use dependencies with known security vulnerabilities
 
 
 script:
+- composer --working-dir=website-skeleton exec --verbose -- console --ansi
 - composer --working-dir=skeleton exec --verbose -- console --ansi
 
 
@@ -65,11 +69,19 @@ after_script:
 - ls --recursive --color skeleton/config
 
 
+- composer --working-dir=website-skeleton show --latest
+- composer --working-dir=website-skeleton show --latest > website-skeleton.txt
 - composer --working-dir=skeleton show --latest
+- composer --working-dir=skeleton show --latest > skeleton.txt
+- colordiff --minimal --side-by-side website-skeleton.txt skeleton.txt
 - $GOPATH/bin/ccat composer.json
+- $GOPATH/bin/ccat website-skeleton/composer.json
 - $GOPATH/bin/ccat skeleton/composer.json
+- colordiff --minimal --side-by-side website-skeleton/composer.json skeleton/composer.json
 
+- composer --working-dir=website-skeleton exec --list
 - composer --working-dir=skeleton exec --list
+- composer --working-dir=website-skeleton run-script --list
 - composer --working-dir=skeleton run-script --list
 
 - composer --working-dir=skeleton exec --verbose -- console list debug --ansi
