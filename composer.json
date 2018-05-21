@@ -6,7 +6,27 @@
     "require": {},
     "suggest": {
         "symfony/skeleton": "Used by script symfony-skeleton",
-        "symfony/web-server-bundle": "Used by script symfony-skeleton"
+        "sensio/framework-extra-bundle": "Used by script symfony-skeleton",
+        "symfony/asset": "Used by script symfony-skeleton",
+        "symfony/expression-language": "Used by script symfony-skeleton",
+        "symfony/form": "Used by script symfony-skeleton",
+        "symfony/monolog-bundle": "Used by script symfony-skeleton",
+        "symfony/orm-pack": "Used by script symfony-skeleton",
+        "symfony/process": "Used by script symfony-skeleton",
+        "symfony/security-bundle": "Used by script symfony-skeleton",
+        "symfony/serializer-pack": "Used by script symfony-skeleton",
+        "symfony/swiftmailer-bundle": "Used by script symfony-skeleton",
+        "symfony/twig-bundle": "Used by script symfony-skeleton",
+        "symfony/validator": "Used by script symfony-skeleton",
+        "symfony/web-link": "Used by script symfony-skeleton",
+        "symfony/webpack-encore-pack": "Used by script symfony-skeleton",
+        "symfony/browser-kit": "Used by script symfony-skeleton (dev)",
+        "symfony/css-selector": "Used by script symfony-skeleton (dev)",
+        "symfony/debug-pack": "Used by script symfony-skeleton (dev)",
+        "symfony/maker-bundle": "Used by script symfony-skeleton (dev)",
+        "symfony/phpunit-bridge": "Used by script symfony-skeleton (dev)",
+        "symfony/profiler-pack": "Used by script symfony-skeleton (dev)",
+        "symfony/web-server-bundle": "Used by script symfony-skeleton (dev)"
     },
     "scripts-descriptions": {
         "symfony-skeleton": "Create project using symfony/skeleton"
