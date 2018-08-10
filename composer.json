@@ -26,6 +26,7 @@
         "symfony/maker-bundle": "Used by script symfony-skeleton (dev)",
         "symfony/phpunit-bridge": "Used by script symfony-skeleton (dev)",
         "symfony/profiler-pack": "Used by script symfony-skeleton (dev)",
+        "symfony/test-pack": "Used by script symfony-skeleton (dev)",
         "symfony/web-server-bundle": "Used by script symfony-skeleton (dev)"
     },
     "scripts-descriptions": {
@@ -56,7 +57,7 @@
             "@composer --working-dir=skeleton require symfony/maker-bundle --dev",
             "@composer --working-dir=skeleton require symfony/phpunit-bridge --dev",
             "@composer --working-dir=skeleton require symfony/profiler-pack --dev",
-            "@composer --working-dir=skeleton require symfony/symfony/test-pack --dev",
+            "@composer --working-dir=skeleton require symfony/test-pack --dev",
             "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
         ]
     }
