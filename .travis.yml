@@ -44,10 +44,10 @@ install:
 - composer run-script --list
 - composer run-script -- symfony-skeleton --ansi
 
-- composer create-project --no-install symfony/website-skeleton
+- composer create-project -vvv --no-install symfony/website-skeleton
 - ls --color website-skeleton # composer.lock ?
 - composer --working-dir=website-skeleton config bin-dir bin
-- composer --working-dir=website-skeleton install
+- composer --working-dir=website-skeleton -vvv install
 
 before_script:
 # - curl_security_check composer.lock
