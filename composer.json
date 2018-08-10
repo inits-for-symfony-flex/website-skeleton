@@ -20,11 +20,8 @@
         "symfony/validator": "Used by script symfony-skeleton",
         "symfony/web-link": "Used by script symfony-skeleton",
         "symfony/webpack-encore-pack": "No more included in website-skeleton since 4.1.2",
-        "symfony/browser-kit": "Used by script symfony-skeleton (dev)",
-        "symfony/css-selector": "Used by script symfony-skeleton (dev)",
         "symfony/debug-pack": "Used by script symfony-skeleton (dev)",
         "symfony/maker-bundle": "Used by script symfony-skeleton (dev)",
-        "symfony/phpunit-bridge": "Used by script symfony-skeleton (dev)",
         "symfony/profiler-pack": "Used by script symfony-skeleton (dev)",
         "symfony/test-pack": "Used by script symfony-skeleton (dev)",
         "symfony/web-server-bundle": "Used by script symfony-skeleton (dev)"
@@ -50,11 +47,8 @@
             "@composer --working-dir=skeleton require symfony/twig-bundle",
             "@composer --working-dir=skeleton require symfony/validator",
             "@composer --working-dir=skeleton require symfony/web-link",
-            "@composer --working-dir=skeleton require symfony/browser-kit --dev",
-            "@composer --working-dir=skeleton require symfony/css-selector --dev",
             "@composer --working-dir=skeleton require symfony/debug-pack --dev",
             "@composer --working-dir=skeleton require symfony/maker-bundle --dev",
-            "@composer --working-dir=skeleton require symfony/phpunit-bridge --dev",
             "@composer --working-dir=skeleton require symfony/profiler-pack --dev",
             "@composer --working-dir=skeleton require symfony/test-pack --dev",
             "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
