@@ -76,6 +76,10 @@ after_script:
 - composer --working-dir=website-skeleton show --latest > website-skeleton.txt
 - composer --working-dir=skeleton show --latest
 - composer --working-dir=skeleton show --latest > skeleton.txt
+- composer --working-dir=website-skeleton why ocramius/proxy-manager
+- composer --working-dir=skeleton why ocramius/proxy-manager
+- composer --working-dir=website-skeleton why symfony/polyfill-ctype
+- composer --working-dir=skeleton why symfony/polyfill-ctype
 - colordiff --minimal --side-by-side website-skeleton.txt skeleton.txt
 - $GOPATH/bin/ccat composer.json
 - $GOPATH/bin/ccat website-skeleton/composer.json
