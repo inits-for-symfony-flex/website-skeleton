@@ -45,7 +45,7 @@ install:
 - composer run-script -- symfony-skeleton --ansi
 
 - composer create-project -vvv --no-install symfony/website-skeleton
-- ls --color website-skeleton # composer.lock ?
+- file website-skeleton/composer.lock
 - composer --working-dir=website-skeleton config bin-dir bin
 - composer --working-dir=website-skeleton -vvv install
 
