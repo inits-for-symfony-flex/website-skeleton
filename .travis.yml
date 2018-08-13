@@ -60,11 +60,17 @@ before_script:
 
 
 script:
+- composer --working-dir=website-skeleton show --latest | grep --invert-match symfony/polyfill-ctype > website-skeleton.txt
+- composer --working-dir=skeleton show --latest > skeleton.txt
+- echo see README.md about symfony/polyfill-ctype
+- colordiff --minimal --side-by-side website-skeleton.txt skeleton.txt
+
+
+after_script:
 - composer --working-dir=website-skeleton exec --verbose -- console --ansi
 - composer --working-dir=skeleton exec --verbose -- console --ansi
 
 
-after_script:
 - ls --almost-all --color
 - ls --almost-all --color skeleton
 - pygmentize -l sh -O linenos=1 skeleton/.env
@@ -76,12 +82,8 @@ after_script:
 - ls --recursive --color skeleton/config
 
 
-- composer --working-dir=website-skeleton show --latest
-- composer --working-dir=website-skeleton show --latest > website-skeleton.txt
+- composer --working-dir=website-skeleton show --latest | grep --invert-match symfony/polyfill-ctype 
 - composer --working-dir=skeleton show --latest
-- composer --working-dir=skeleton show --latest > skeleton.txt
-- echo see README.md about symfony/polyfill-ctype
-- colordiff --minimal --side-by-side website-skeleton.txt skeleton.txt
 - $GOPATH/bin/ccat composer.json
 - $GOPATH/bin/ccat website-skeleton/composer.json
 - $GOPATH/bin/ccat skeleton/composer.json
