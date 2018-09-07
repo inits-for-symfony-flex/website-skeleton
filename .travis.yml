@@ -80,14 +80,16 @@ install:
 
 before_script:
 # - curl_security_check composer.lock
-- curl_security_check website-skeleton/composer.lock
 - curl_security_check skeleton/composer.lock
+- curl_security_check website-skeleton/composer.lock
 #^ This checks that the application doesn't use dependencies with known security vulnerabilities
 
 
 script:
-- composer --working-dir=website-skeleton show --latest | grep --invert-match symfony/polyfill-ctype > website-skeleton.txt
 - composer --working-dir=skeleton show --latest > skeleton.txt
+- composer --working-dir=skeleton why symfony/flex
+- composer --working-dir=website-skeleton show --latest | grep --invert-match symfony/polyfill-ctype > website-skeleton.txt
+- composer --working-dir=website-skeleton why symfony/flex
 - echo see README.md about symfony/polyfill-ctype
 - colordiff --minimal --side-by-side website-skeleton.txt skeleton.txt
 
