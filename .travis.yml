@@ -41,6 +41,7 @@ before_install:
 
 
 install:
+- composer global require sensiolabs/security-checker
 - composer install
 - composer run-script --list
 - composer run-script -- symfony-skeleton --ansi
@@ -80,6 +81,8 @@ install:
 
 before_script:
 # - curl_security_check composer.lock
+- ~/.composer/vendor/bin/security-checker security:check skeleton/composer.lock
+- ~/.composer/vendor/bin/security-checker security:check website-skeleton/composer.lock
 - curl_security_check skeleton/composer.lock
 - curl_security_check website-skeleton/composer.lock
 #^ This checks that the application doesn't use dependencies with known security vulnerabilities
