@@ -91,9 +91,11 @@ before_script:
 
 script:
 - composer --working-dir=skeleton show --latest > skeleton.txt
-- composer --working-dir=skeleton why symfony/flex
+- composer --working-dir=skeleton why symfony/contracts
+- composer --working-dir=skeleton why symfony/translation
 - composer --working-dir=website-skeleton show --latest | grep --invert-match symfony/polyfill-ctype > website-skeleton.txt
-- composer --working-dir=website-skeleton why symfony/flex
+- composer --working-dir=website-skeleton why symfony/contracts
+- composer --working-dir=website-skeleton why symfony/translation
 - echo see README.md about symfony/polyfill-ctype
 - colordiff --minimal --side-by-side website-skeleton.txt skeleton.txt
 
