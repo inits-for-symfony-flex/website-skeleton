@@ -38,7 +38,6 @@
             "@composer --working-dir=skeleton install",
             "@composer --working-dir=skeleton require sensio/framework-extra-bundle",
             "@composer --working-dir=skeleton require symfony/asset",
-            "@composer --working-dir=skeleton require symfony/contracts",
             "@composer --working-dir=skeleton require symfony/expression-language",
             "@composer --working-dir=skeleton require symfony/form",
             "@composer --working-dir=skeleton require symfony/monolog-bundle",
@@ -56,6 +55,7 @@
             "@composer --working-dir=skeleton require symfony/profiler-pack --dev",
             "@composer --working-dir=skeleton require symfony/test-pack --dev",
             "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
+            "@composer --working-dir=skeleton update symfony/contracts",
         ]
     }
 }
