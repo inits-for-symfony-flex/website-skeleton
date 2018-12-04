@@ -54,8 +54,8 @@
             "@composer --working-dir=skeleton require symfony/maker-bundle --dev",
             "@composer --working-dir=skeleton require symfony/profiler-pack --dev",
             "@composer --working-dir=skeleton require symfony/test-pack --dev",
-            "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
-            "@composer --working-dir=skeleton update symfony/contracts",
+            "@composer --working-dir=skeleton require symfony/web-server-bundle --dev",
+            "@composer --working-dir=skeleton update symfony/contracts"
         ]
     }
 }
