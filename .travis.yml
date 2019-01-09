@@ -42,6 +42,7 @@ before_install:
 
 install:
 - composer global require sensiolabs/security-checker
+- composer validate
 - composer install
 - composer run-script --list
 - composer run-script --verbose -- symfony-skeleton --ansi
