@@ -29,7 +29,7 @@
     },
     "scripts-descriptions": {
         "symfony-skeleton": "Create project using symfony/skeleton",
-        "//a": "update needed because composer.lock file may be slightly outdated"
+        "//a": "The command << composer update >> is needed because composer.lock file may be slightly outdated!"
     },
     "scripts": {
         "symfony-skeleton": [
