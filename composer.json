@@ -28,7 +28,8 @@
         "symfony/web-server-bundle": "Used by script symfony-skeleton (dev)"
     },
     "scripts-descriptions": {
-        "symfony-skeleton": "Create project using symfony/skeleton"
+        "symfony-skeleton": "Create project using symfony/skeleton",
+        "//b": "composer.lock file may be slightly outdated"
     },
     "scripts": {
         "symfony-skeleton": [
@@ -57,6 +58,5 @@
             "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
         ],
         "//a": "composer.lock file may be slightly outdated"
-    },
-    "//b": "composer.lock file may be slightly outdated"
+    }
 }
