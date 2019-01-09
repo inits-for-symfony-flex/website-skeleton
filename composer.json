@@ -56,6 +56,7 @@
             "@composer --working-dir=skeleton require symfony/test-pack --dev",
             "@composer --working-dir=skeleton require symfony/web-server-bundle --dev"
         ],
-        "": "composer.lock file may be slightly outdated"
-    }
+        "//a": "composer.lock file may be slightly outdated"
+    },
+    "//b": "composer.lock file may be slightly outdated"
 }
