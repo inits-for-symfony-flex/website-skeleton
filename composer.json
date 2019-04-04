@@ -34,7 +34,7 @@
         "symfony-skeleton": [
             "@composer create-project --no-install symfony/skeleton:^3.4",
             "@composer --working-dir=skeleton config bin-dir bin",
-            "@composer --working-dir=skeleton install",
+            "@composer --working-dir=skeleton update",
             "@composer --working-dir=skeleton require sensio/framework-extra-bundle",
             "@composer --working-dir=skeleton require symfony/asset",
             "@composer --working-dir=skeleton require symfony/expression-language",
