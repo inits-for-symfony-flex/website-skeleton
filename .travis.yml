@@ -45,7 +45,7 @@ install:
 - composer global require sensiolabs/security-checker
 - composer install
 - composer run-script --list
-- composer run-script -- symfony-skeleton --ansi
+- composer run-script --verbose -- symfony-skeleton --ansi
 
 - |
   composer create-project --no-install symfony/website-skeleton
